@@ -17,6 +17,7 @@ struct StoriesView: View {
     
     @Environment(\.modelContext) var modelContext
     @State var isLiked: Bool = false
+    @State var info: StoryInfo = StoryInfo(userId: -1, storySeen: false, storyLiked: false)
     
     var item: UserItem
     
@@ -49,8 +50,9 @@ struct StoriesView: View {
                         
                         Button {
                             isLiked.toggle()
+                            changeLikedStatus(isLiked)
                         } label: {
-                            Image(systemName: isLiked ? "heart.fill" : "heart")
+                            Image(systemName: info.storyLiked ? "heart.fill" : "heart")
                                 .font(.largeTitle)
                                 .foregroundStyle(.red)
                                 .symbolEffect(.pulse, options: .default, value: isLiked)
@@ -63,6 +65,23 @@ struct StoriesView: View {
                 .background(.ultraThinMaterial)
             }
         }
+        .onAppear {
+            let defaultInfo = StoryInfo.init(userId: item.user.id, storySeen: true, storyLiked: false)
+            info = defaultInfo
+            Task {
+                info = modelContext.getStory(by: item.user.id) ?? defaultInfo
+            }
+        }
+        .onDisappear {
+            modelContext.addStory(story: self.info)
+        }
+    }
+    
+    private func changeLikedStatus(_ liked: Bool) {
+        let updatedStory = StoryInfo(userId: info.userId, storySeen: true, storyLiked: liked)
+        modelContext.deleteStory(story: info)
+        modelContext.addStory(story: updatedStory)
+        info = updatedStory
     }
 }
 

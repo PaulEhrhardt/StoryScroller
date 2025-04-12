@@ -20,7 +20,7 @@ struct StoryScrollerApp: App {
     @State var viewModel = StoryScrollerViewModel()
     
     var sharedModelContainer: ModelContainer = {
-        let schema = Schema([Story.self])
+        let schema = Schema([StoryInfo.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])

@@ -14,13 +14,14 @@ struct UserView: View {
     
     
     var item: UserItem
+    var isVisited: Bool
     
     var imageUrl: URL {
         URL(string: item.user.profilePictureURL) ?? Bundle.main.url(forResource: "dummyImage", withExtension: "png")!
     }
     
     var background: Color {
-        item.isVisited ? .orange : .teal
+        isVisited ? .orange : .teal
     }
     
     var body: some View {
@@ -52,11 +53,11 @@ struct UserView: View {
             }
         }
         .padding()
-        .background(.teal)
+        .background(background)
         .clipShape(Circle())
     }
 }
 
 #Preview {
-    UserView(item: UserItem(user: User(id: 111, name: "Commander Thadeus", profilePictureURL: "https://picsum.photos/200")))
+    UserView(item: UserItem(user: User(id: 111, name: "Commander Thadeus", profilePictureURL: "https://picsum.photos/200")), isVisited: false)
 }

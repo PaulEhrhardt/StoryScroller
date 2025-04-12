@@ -18,8 +18,5 @@ struct UserItem: Identifiable, Hashable, Sendable {
     var storyImageUrl: String {
         "https://picsum.photos/id/\(user.id)/200/300"
     }
-    
-    var isVisited: Bool = false
-    var isLiked: Bool = false
 }
 

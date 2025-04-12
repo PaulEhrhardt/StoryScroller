@@ -1,5 +1,5 @@
 //
-//  Story.swift
+//  StoryInfo.swift
 //  StoryScroller
 //
 //  Created by Paul Ehrhardt on 12/4/25.
@@ -9,10 +9,10 @@ import Foundation
 import SwiftData
 
 
-// MARK: - Story -
+// MARK: - StoryInfo -
 
 @Model
-final class Story {
+final class StoryInfo {
     
     var updatded: Date
     var userId: Int

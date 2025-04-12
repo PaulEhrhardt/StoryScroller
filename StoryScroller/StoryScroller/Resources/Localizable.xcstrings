@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Add Story" : {
-
-    },
     "error_load_message" : {
       "localizations" : {
         "en" : {
@@ -24,9 +21,6 @@
         }
       }
     },
-    "Select an item" : {
-
-    },
     "storie_like_text_name_%@" : {
       "localizations" : {
         "en" : {
@@ -36,9 +30,6 @@
           }
         }
       }
-    },
-    "Story at %@" : {
-
     }
   },
   "version" : "1.0"
