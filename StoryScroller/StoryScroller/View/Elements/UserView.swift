@@ -18,11 +18,9 @@ struct UserView: View {
     var imageUrl: URL {
         URL(string: item.user.profilePictureURL) ?? Bundle.main.url(forResource: "dummyImage", withExtension: "png")!
     }
-
-    var wasVisited: Bool
     
     var background: Color {
-        wasVisited ? .orange : .teal
+        item.isVisited ? .orange : .teal
     }
     
     var body: some View {
@@ -37,9 +35,9 @@ struct UserView: View {
                             Circle()
                                 .stroke(Color.white, lineWidth: 4)
                         )
-                        .shadow(radius: 10)
+                        .shadow(radius: 8)
                 } placeholder: {
-                    ProgressView()
+                    LoadingView()
                 }
                 .frame(width: 250, height: 250)
                 
@@ -60,5 +58,5 @@ struct UserView: View {
 }
 
 #Preview {
-    UserView(item: UserItem(user: User(id: 111, name: "Commander Thadeus", profilePictureURL: "https://picsum.photos/200")), wasVisited: false)
+    UserView(item: UserItem(user: User(id: 111, name: "Commander Thadeus", profilePictureURL: "https://picsum.photos/200")))
 }

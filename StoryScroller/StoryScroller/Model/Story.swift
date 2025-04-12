@@ -13,9 +13,16 @@ import SwiftData
 
 @Model
 final class Story {
-    var timestamp: Date
     
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+    var updatded: Date
+    var userId: Int
+    var storySeen: Bool
+    var storyLiked: Bool
+    
+    init(userId: Int, storySeen: Bool, storyLiked: Bool) {
+        self.userId = userId
+        self.storySeen = storySeen
+        self.storyLiked = storyLiked
+        self.updatded = .now
     }
 }

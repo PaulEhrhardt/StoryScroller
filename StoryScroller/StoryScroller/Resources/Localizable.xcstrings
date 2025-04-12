@@ -1,0 +1,45 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Add Story" : {
+
+    },
+    "error_load_message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ooops!\nSomething went wrong while loading content. Please check your Internet connection."
+          }
+        }
+      }
+    },
+    "error_load_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        }
+      }
+    },
+    "Select an item" : {
+
+    },
+    "storie_like_text_name_%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Like the story of %@"
+          }
+        }
+      }
+    },
+    "Story at %@" : {
+
+    }
+  },
+  "version" : "1.0"
+}
