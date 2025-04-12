@@ -8,11 +8,19 @@
 import SwiftUI
 import SwiftData
 
+
+// MARK: - StoryScrollerApp -
+
 @main
 struct StoryScrollerApp: App {
     
+    
+    // MARK: - Properties
+    
+    @State var viewModel = StoryScrollerViewModel()
+    
     var sharedModelContainer: ModelContainer = {
-        let schema = Schema([Item.self])
+        let schema = Schema([Story.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
@@ -21,10 +29,14 @@ struct StoryScrollerApp: App {
         }
     }()
 
+    
+    // MARK: - Lifecycle
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StoryListView()
         }
         .modelContainer(sharedModelContainer)
+        .environment(viewModel)
     }
 }

@@ -1,0 +1,17 @@
+//
+//  UserItem.swift
+//  StoryScroller
+//
+//  Created by Paul Ehrhardt on 12/4/25.
+//
+
+import Foundation
+
+
+// MARK: - UserItem -
+
+struct UserItem: Identifiable, Hashable, Sendable {
+    
+    let id: UUID = UUID()
+    let user: User
+}

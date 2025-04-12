@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  Story.swift
 //  StoryScroller
 //
 //  Created by Paul Ehrhardt on 12/4/25.
@@ -8,8 +8,11 @@
 import Foundation
 import SwiftData
 
+
+// MARK: - Story -
+
 @Model
-final class Item {
+final class Story {
     var timestamp: Date
     
     init(timestamp: Date) {
