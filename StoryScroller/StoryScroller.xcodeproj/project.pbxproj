@@ -27,7 +27,6 @@
 		E8A06D542DAA74E6006A2669 /* StoryScroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryScroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A06D662DAA74E8006A2669 /* StoryScrollerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryScrollerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A06D702DAA74E8006A2669 /* StoryScrollerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryScrollerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8D0EA182DAAAAAD00388AB1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -80,7 +79,6 @@
 				E8A06D692DAA74E8006A2669 /* StoryScrollerTests */,
 				E8A06D732DAA74E8006A2669 /* StoryScrollerUITests */,
 				E8A06D552DAA74E6006A2669 /* Products */,
-				E8D0EA182DAAAAAD00388AB1 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
